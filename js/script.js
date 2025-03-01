@@ -5,11 +5,7 @@ const clearHistoryButton = document.getElementById("clear-history-button");
 const mainRightBottomContainer = document.getElementById("main-right-bottom-container");
 const taskCompletedButton = document.querySelectorAll(".task-completed-button");
 const themeChangeButton = document.getElementById("theme-change-button")
-const blogPageButton = document.querySelector(".main-left-2");
 
-blogPageButton.addEventListener("click",function(){
-    window.location.href="/blog.html"
-});
 
 let currentDate = new Date().toLocaleDateString("en-US", { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' });
 todayDate.innerText = currentDate;

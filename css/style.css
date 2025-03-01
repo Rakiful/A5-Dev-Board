@@ -109,6 +109,7 @@ body{
     background: linear-gradient(130.70deg, rgb(55, 82, 253) 0.419%,rgb(108, 127, 250) 52.66%,rgb(155, 168, 248) 99.733%);
     padding: 10px 20px;
     border-radius: 16px;
+    text-decoration: none;
 }
 .main-left-top-container .main-left-2 img{
     border: 2px dashed rgb(187, 142, 58);
@@ -266,12 +267,15 @@ body{
 }
 
 #back-to-desk{
+    display: flex;
+    align-items: center;
     font-size: 18px;
     border-radius: 8px;
     background: rgb(55, 82, 253);
     padding: 10px 20px 10px 20px;
     color: #ffffff;
     cursor: pointer;
+    text-decoration: none;
 }
 .faq-section{
     width: 80%;
