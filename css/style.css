@@ -264,3 +264,29 @@ body{
     padding: 10px 20px 10px 20px !important;
     cursor: pointer !important;
 }
+
+#back-to-desk{
+    font-size: 18px;
+    border-radius: 8px;
+    background: rgb(55, 82, 253);
+    padding: 10px 20px 10px 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.faq-section{
+    width: 80%;
+    margin: 20px auto;
+}
+.faq-section h1{
+    text-align: center;
+}
+.faq-card{
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+.faq-card div{
+    padding: 20px;
+}
+.faq-card div:nth-child(1){
+    border-bottom: 2px dashed rgb(90, 88, 156);
+}

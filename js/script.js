@@ -4,12 +4,16 @@ const todayDate = document.getElementById("today-date");
 const clearHistoryButton = document.getElementById("clear-history-button");
 const mainRightBottomContainer = document.getElementById("main-right-bottom-container");
 const taskCompletedButton = document.querySelectorAll(".task-completed-button");
+const blogPageButton = document.querySelector(".main-left-2");
+
+blogPageButton.addEventListener("click",function(){
+    window.location.href="/blog.html"
+});
 
 let currentDate = new Date().toLocaleDateString("en-US", { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' });
 todayDate.innerText = currentDate;
 let taskAssignedCountValue = 6;    
 let checkboxCountValue = 23;
-
 
 for(let i = 0 ; i < taskCompletedButton.length ; i++){
     taskCompletedButton[i].addEventListener("click",function(event){
@@ -34,7 +38,6 @@ for(let i = 0 ; i < taskCompletedButton.length ; i++){
         mainRightBottomContainer.appendChild(div);
     })
 }
-
 
 clearHistoryButton.addEventListener("click",function(){
     mainRightBottomContainer.innerHTML = ""
