@@ -6,7 +6,6 @@ const mainRightBottomContainer = document.getElementById("main-right-bottom-cont
 const taskCompletedButton = document.querySelectorAll(".task-completed-button");
 const themeChangeButton = document.getElementById("theme-change-button")
 
-
 let currentDate = new Date().toLocaleDateString("en-US", { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' });
 todayDate.innerText = currentDate;
 let taskAssignedCountValue = 6;    
@@ -33,13 +32,16 @@ for(let i = 0 ; i < taskCompletedButton.length ; i++){
         `;
         div.classList.add("history-box")
         mainRightBottomContainer.appendChild(div);
+        
+        if(checkboxCountValue > 28){
+            alert("congrates!!! You have completed all the current task")
+        }
     })
 }
 
 clearHistoryButton.addEventListener("click",function(){
     mainRightBottomContainer.innerHTML = ""
 })
-
 
 let colorList = ["rgb(140, 237, 166)","rgb(146, 140, 237)","rgb(237, 180, 140)","rgb(205, 140, 237)","rgb(241, 98, 98)"]
 let colorIndex = 0;
