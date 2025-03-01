@@ -4,6 +4,7 @@ const todayDate = document.getElementById("today-date");
 const clearHistoryButton = document.getElementById("clear-history-button");
 const mainRightBottomContainer = document.getElementById("main-right-bottom-container");
 const taskCompletedButton = document.querySelectorAll(".task-completed-button");
+const themeChangeButton = document.getElementById("theme-change-button")
 const blogPageButton = document.querySelector(".main-left-2");
 
 blogPageButton.addEventListener("click",function(){
@@ -42,3 +43,17 @@ for(let i = 0 ; i < taskCompletedButton.length ; i++){
 clearHistoryButton.addEventListener("click",function(){
     mainRightBottomContainer.innerHTML = ""
 })
+
+
+let colorList = ["rgb(140, 237, 166)","rgb(146, 140, 237)","rgb(237, 180, 140)","rgb(205, 140, 237)","rgb(241, 98, 98)"]
+let colorIndex = 0;
+
+themeChangeButton.addEventListener("click",function(){
+    if(colorIndex < colorList.length){
+        document.body.style.backgroundColor = `${colorList[colorIndex]}`;
+        colorIndex++;
+    }else{
+        colorIndex = 0;
+        document.body.style.backgroundColor = "rgb(140, 216, 237)";
+    }
+});
